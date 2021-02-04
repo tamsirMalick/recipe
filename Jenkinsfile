@@ -9,6 +9,12 @@ pipeline {
                 sh 'mvn test'
             }
         }
+
+        stage('Package recipe project') {
+                    steps {
+                        sh 'mvn package -DskipTests=true'
+                    }
+                }
     }
     post { 
         always { 
