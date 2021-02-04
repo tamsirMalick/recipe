@@ -4,9 +4,9 @@ pipeline {
         maven 'maven363'
     }
     stages {
-        stage('Get maven version') {
+        stage('Test maven project') {
             steps {
-                sh 'mvn --version'
+                sh 'mvn test'
             }
         }
     }
